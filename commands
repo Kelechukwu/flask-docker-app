@@ -1,0 +1,14 @@
+#build a docker image from the Dockerfile in the project
+docker build -t friendlyhello .
+
+#run in detached mode
+docker run -d -p 4000:80 friendlyhello
+
+#run in non-detached mode
+docker run -p 4000:80 friendlyhello
+
+#tag the image
+docker tag friendlyhello nwosu/get-started:part2
+
+#publish the Image
+docker push  nwosu/get-started:part2
