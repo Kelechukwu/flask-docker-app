@@ -20,9 +20,9 @@ def hello():
            "<b>Visits:</b> {visits}"
     return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
 
-@app.route("/hi")
-def hi():
-    return "hi!!!"
+@app.route("/hi_again")
+def hi_again():
+    return "hi again !!!"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
